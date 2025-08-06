@@ -1,0 +1,16 @@
+<!--***************************************************************-->
+<!--                                                               -->
+<!--         Project : WoiWidgets                                  -->
+<!--         File    : close.svg                                   -->
+<!--         Author  : Nazuha26                                    -->
+<!--                                                               -->
+<!--         Copyright (c) 2025 by Nazuha26                        -->
+<!--         All bugs are my own. Handle with care.                -->
+<!--         Copyright last updated on 25.07.2025 at (09:23:45)    -->
+<!--                                                               -->
+<!--***************************************************************-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <line x1="4" y1="4" x2="20" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="20" y1="4" x2="4" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>

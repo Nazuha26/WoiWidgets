@@ -1,0 +1,15 @@
+<!--***************************************************************-->
+<!--                                                               -->
+<!--         Project : WoiWidgets                                  -->
+<!--         File    : minimize.svg                                -->
+<!--         Author  : Nazuha26                                    -->
+<!--                                                               -->
+<!--         Copyright (c) 2025 by Nazuha26                        -->
+<!--         All bugs are my own. Handle with care.                -->
+<!--         Copyright last updated on 25.07.2025 at (09:23:45)    -->
+<!--                                                               -->
+<!--***************************************************************-->
+
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <rect x="5" y="11" width="14" height="2" rx="1" ry="1" fill="white"/>
+</svg>

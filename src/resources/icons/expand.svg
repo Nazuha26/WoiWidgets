@@ -1,0 +1,15 @@
+<!--***************************************************************-->
+<!--                                                               -->
+<!--         Project : WoiWidgets                                  -->
+<!--         File    : expand.svg                                  -->
+<!--         Author  : Nazuha26                                    -->
+<!--                                                               -->
+<!--         Copyright (c) 2025 by Nazuha26                        -->
+<!--         All bugs are my own. Handle with care.                -->
+<!--         Copyright last updated on 25.07.2025 at (09:23:45)    -->
+<!--                                                               -->
+<!--***************************************************************-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <polyline points="6 15 12 9 18 15" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
