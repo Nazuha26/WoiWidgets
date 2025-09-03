@@ -17,8 +17,8 @@ In addition, it implements a basic system of a **custom proxy style**, including
 
 ### Preview
 <p align="center">
-  <img src="demo/2.png" alt="Preview2" width="250"/>
-  <img src="demo/3.png" alt="Preview3" width="250"/>
+  <img src="demo/2.png" alt="Preview2" width="450"/>
+  <img src="demo/3.png" alt="Preview3" width="450"/>
 </p>
 
 ---
@@ -55,7 +55,4 @@ int main(int argc, char* argv[])
 
 ## Demo
 
-<figure class="video_container">
-  <iframe src="demo/demo.mp4" border="0" allowfullscreen="allowfullscreen"> 
-</iframe>
-</figure>
+[![Watch the demo](demo/1.png)](demo/demo.mp4)
