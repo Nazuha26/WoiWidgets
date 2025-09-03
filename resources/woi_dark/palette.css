@@ -1,0 +1,27 @@
+QWidget {
+    color: #2F3138;   /* Window */
+    color: #E6E8EA;   /* WindowText */
+    color: #3A3C44;   /* Base */
+    color: #C9CCD1;   /* Text */
+    color: #45474F;   /* AlternateBase */
+    color: #9AA0A6;   /* PlaceholderText */
+
+    color: #404855;   /* Button */
+    color: #E6E8EA;   /* ButtonText */
+    color: #FF5A5A;   /* BrightText */
+
+    color: #7E848E;   /* Light */
+    color: #646A74;   /* Midlight */
+    color: #2B2F36;   /* Mid */
+    color: #1F2329;   /* Dark */
+    color: #0F1114;   /* Shadow */
+
+    color: #5E49B3;   /* Highlight */
+    color: #FFFFFF;   /* HighlightedText */
+
+    color: #60A5FA;   /* Link */
+    color: #A78BFA;   /* LinkVisited */
+
+    color: #d53131; /* close 1 */
+    color: #cf4343; /* close 2 */
+}

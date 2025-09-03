@@ -1,0 +1,9 @@
+[Icon Theme]
+Name=woi_light
+Comment=WOI Light Icons
+Directories=icons/24x24/actions
+
+[icons/24x24/actions]
+Size=24
+Type=Fixed
+Context=Actions

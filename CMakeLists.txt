@@ -2,86 +2,133 @@ cmake_minimum_required(VERSION 3.30)
 project(WoiWidgets)
 
 set(CMAKE_CXX_STANDARD 20)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/6.9.0/mingw_64")
 
-find_package(Qt6 COMPONENTS
-    Core
-    Gui
-    Widgets
-    Svg
-    REQUIRED)
+find_package(Qt6 REQUIRED COMPONENTS
+        Core Gui Widgets
+)
 
 add_executable(WoiWidgets main.cpp
-        src/core/ResizePreview.cpp
-        src/core/ResizePreview.h
-        src/widgets/WoiTitleBar.cpp
-        src/widgets/WoiTitleBar.h
-        src/widgets/WoiPushButton.cpp
-        src/widgets/WoiPushButton.h
-        src/core/WoiMacros.h
-        src/core/WoiWindowFrame.cpp
-        src/core/WoiWindowFrame.h
-        src/core/Icons.cpp
-        src/core/Icons.h
-        src/widgets/WoiTitleBarButton.cpp
-        src/widgets/WoiTitleBarButton.h
-        src/core/ShadowOverlayWindow.cpp
-        src/core/ShadowOverlayWindow.h
-        src/core/style/WoiThemeEngine.cpp
-        src/core/style/WoiThemeEngine.h
-        src/core/style/WoiThemeWidget.cpp
-        src/core/style/WoiThemeWidget.h
+        WoiCustomWindow.cpp
+        WoiCustomWindow.h
+        core/WoiThemeEngine.cpp
+        core/WoiThemeEngine.h
+        core/Icons.cpp
+        core/Icons.h
+        core/style/WoiStyle.cpp
+        core/style/WoiStyle.h
+        core/style/widgets/WoiStyleButtons.cpp
+        core/style/widgets/WoiStyleButtons.h
+        core/style/widgets/WoiStyleTabBar.cpp
+        core/style/widgets/WoiStyleTabBar.h
+        core/style/widgets/WoiStyleMenu.cpp
+        core/style/widgets/WoiStyleMenu.h
+        core/style/widgets/WoiTooltip.cpp
+        core/style/widgets/WoiTooltip.h
+        core/thirdparty/iir_gauss_blur.h
+        core/style/WoiStyleUtility.cpp
+        core/style/WoiStyleUtility.h
 )
 
-# =============== RESOURCES ===============
-
-# ========== ICONS:
-qt_add_resources(WoiWidgets "Icons"
-    PREFIX "/icons"
-    BASE src/resources/icons
-    FILES
-        src/resources/icons/test.svg
-        src/resources/icons/collapse.svg
-        src/resources/icons/expand.svg
-        src/resources/icons/minimize.svg
-        src/resources/icons/maximize.svg
-        src/resources/icons/restore.svg
-        src/resources/icons/close.svg
+target_link_libraries(WoiWidgets PRIVATE
+        Qt6::Core Qt6::Gui Qt6::Widgets
+        dwmapi uxtheme
 )
 
-# ========== FONTS:
-qt_add_resources(WoiWidgets "RobotoFonts"
-    PREFIX "/roboto"
-    BASE src/resources/fonts/roboto
-    FILES
-        src/resources/fonts/roboto/Roboto-Regular.ttf
-        src/resources/fonts/roboto/Roboto-Italic.ttf
-        src/resources/fonts/roboto/Roboto-Bold.ttf
-        src/resources/fonts/roboto/Roboto-BoldItalic.ttf
-)
-
-qt_add_resources(WoiWidgets "UbuntuFonts"
-        PREFIX "/ubuntu"
-        BASE src/resources/fonts/ubuntu
+#[[ ========== RESOURCES ========== ]]
+qt_add_resources(WoiWidgets "WoiCommon"
+        PREFIX "/woiCom"  # woi common resources
+        BASE resources/woi_common
         FILES
-            src/resources/fonts/ubuntu/Ubuntu-Regular.ttf
-            src/resources/fonts/ubuntu/Ubuntu-Italic.ttf
-            src/resources/fonts/ubuntu/Ubuntu-Bold.ttf
-            src/resources/fonts/ubuntu/Ubuntu-BoldItalic.ttf
-)
-# =============================================
-
-target_link_libraries(WoiWidgets
-  Qt::Core
-  Qt::Gui
-  Qt::Widgets
-  Qt::Svg
+        resources/woi_common/icons/test_24.png
+        resources/woi_common/icons/woi_20.png
+        resources/woi_common/icons/woi_32.png
 )
 
+#[[ ===== QSS ===== ]]
+qt_add_resources(WoiWidgets "DarkQss"
+        PREFIX "/dark/qss"
+        BASE resources/woi_dark
+        FILES resources/woi_dark/dark.qss
+)
+qt_add_resources(WoiWidgets "LightQss"
+        PREFIX "/light/qss"
+        BASE resources/woi_light
+        FILES
+            # nothing
+)
+
+#[[ ===== ICONS ===== ]]
+qt_add_resources(WoiWidgets "ThirdPartyIcons"
+        PREFIX "/tpIcons"   # third-party icons by Jorgen-VikingGod:
+                            # https://github.com/Jorgen-VikingGod/Qt-Frameless-Window-DarkStyle/blob/master/darkstyle
+        BASE resources/third-party/icons
+        FILES
+        resources/third-party/icons/icon_branch_closed.png
+        resources/third-party/icons/icon_branch_end.png
+        resources/third-party/icons/icon_branch_more.png
+        resources/third-party/icons/icon_branch_open.png
+        resources/third-party/icons/icon_checkbox_checked.png
+        resources/third-party/icons/icon_checkbox_checked_disabled.png
+        resources/third-party/icons/icon_checkbox_checked_pressed.png
+        resources/third-party/icons/icon_checkbox_indeterminate.png
+        resources/third-party/icons/icon_checkbox_indeterminate_disabled.png
+        resources/third-party/icons/icon_checkbox_indeterminate_pressed.png
+        resources/third-party/icons/icon_checkbox_unchecked.png
+        resources/third-party/icons/icon_checkbox_unchecked_disabled.png
+        resources/third-party/icons/icon_checkbox_unchecked_pressed.png
+        resources/third-party/icons/icon_close.png
+        resources/third-party/icons/icon_radiobutton_checked.png
+        resources/third-party/icons/icon_radiobutton_checked_disabled.png
+        resources/third-party/icons/icon_radiobutton_checked_pressed.png
+        resources/third-party/icons/icon_radiobutton_unchecked.png
+        resources/third-party/icons/icon_radiobutton_unchecked_disabled.png
+        resources/third-party/icons/icon_radiobutton_unchecked_pressed.png
+        resources/third-party/icons/icon_restore.png
+        resources/third-party/icons/icon_undock.png
+        resources/third-party/icons/icon_vline.png
+)
+
+# ===== ICON THEMES (dark + light) =====
+qt_add_resources(WoiWidgets "WoiIconThemes"
+        PREFIX "/res"
+        BASE   resources
+        FILES
+        # --- DARK ---
+        resources/woi_dark/index.theme
+
+        resources/woi_dark/icons/24x24/arrow_up.png
+        resources/woi_dark/icons/24x24/arrow_down.png
+        resources/woi_dark/icons/24x24/arrow_left.png
+        resources/woi_dark/icons/24x24/arrow_right.png
+        resources/woi_dark/icons/24x24/minimize.png
+        resources/woi_dark/icons/24x24/maximize.png
+        resources/woi_dark/icons/24x24/restore.png
+        resources/woi_dark/icons/24x24/close.png
+        resources/woi_dark/icons/24x24/toolbar_handle-h.png
+        resources/woi_dark/icons/24x24/toolbar_handle-v.png
+        resources/woi_dark/icons/24x24/resize-corner.png
+
+        resources/woi_dark/icons/24x24/actions/edit-copy.png
+        resources/woi_dark/icons/24x24/actions/edit-cut.png
+        resources/woi_dark/icons/24x24/actions/edit-paste.png
+        resources/woi_dark/icons/24x24/actions/edit-delete.png
+        resources/woi_dark/icons/24x24/actions/edit-select-all.png
+        resources/woi_dark/icons/24x24/actions/edit-undo.png
+        resources/woi_dark/icons/24x24/actions/edit-redo.png
+
+        # --- LIGHT ---
+        resources/woi_light/index.theme
+        # not icons yet...
+)
+
+
+# Auto generated by CLion
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
     if (MSVC AND CMAKE_BUILD_TYPE MATCHES "Debug")
