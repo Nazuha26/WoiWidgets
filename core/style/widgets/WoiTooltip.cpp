@@ -1,3 +1,13 @@
+//********************************************************************
+//                                                                   *
+//         File    : WoiTooltip.cpp                                  *
+//         Author  : Nazuha26                                        *
+//                                                                   *
+//         Copyright (c) 2025 by Nazuha26                            *
+//         All bugs are my own. Handle with care.                    *
+//                                                                   *
+//********************************************************************
+
 //         Created by Nazuha26 in CLion
 //         Date: 31.08.2025
 //         Time: 15:08:16

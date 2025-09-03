@@ -1,12 +1,10 @@
 //********************************************************************
 //                                                                   *
-//         Project : WoiWidgets                                      *
 //         File    : Icons.cpp                                       *
 //         Author  : Nazuha26                                        *
 //                                                                   *
 //         Copyright (c) 2025 by Nazuha26                            *
 //         All bugs are my own. Handle with care.                    *
-//         Copyright last updated on 25.07.2025 at (09:23:45)        *
 //                                                                   *
 //********************************************************************
 

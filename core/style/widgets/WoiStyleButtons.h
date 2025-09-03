@@ -1,3 +1,13 @@
+//********************************************************************
+//                                                                   *
+//         File    : WoiStyleButtons.h                               *
+//         Author  : Nazuha26                                        *
+//                                                                   *
+//         Copyright (c) 2025 by Nazuha26                            *
+//         All bugs are my own. Handle with care.                    *
+//                                                                   *
+//********************************************************************
+
 //         Created by Nazuha26 in CLion
 //         Date: 29.08.2025
 //         Time: 10:11:53

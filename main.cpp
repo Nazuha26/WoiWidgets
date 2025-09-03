@@ -1,3 +1,13 @@
+//********************************************************************
+//                                                                   *
+//         File    : main.cpp                                        *
+//         Author  : Nazuha26                                        *
+//                                                                   *
+//         Copyright (c) 2025 by Nazuha26                            *
+//         All bugs are my own. Handle with care.                    *
+//                                                                   *
+//********************************************************************
+
 #include <QtWidgets>
 
 #include "WoiCustomWindow.h"

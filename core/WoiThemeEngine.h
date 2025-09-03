@@ -1,12 +1,10 @@
 //********************************************************************
 //                                                                   *
-//         Project : WoiWidgets                                      *
 //         File    : WoiThemeEngine.h                                *
 //         Author  : Nazuha26                                        *
 //                                                                   *
 //         Copyright (c) 2025 by Nazuha26                            *
 //         All bugs are my own. Handle with care.                    *
-//         Copyright last updated on 04.08.2025 at (20:18:09)        *
 //                                                                   *
 //********************************************************************
 
