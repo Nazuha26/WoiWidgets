@@ -54,5 +54,4 @@ int main(int argc, char* argv[])
 ---
 
 ## Demo
-
-[![Watch the demo](demo/1.png)](demo/demo.mp4)
+https://github.com/user-attachments/assets/585f8997-972e-43a6-a0bd-43e08f5df101
