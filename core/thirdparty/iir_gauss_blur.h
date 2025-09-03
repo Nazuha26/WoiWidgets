@@ -1,13 +1,3 @@
-//********************************************************************
-//                                                                   *
-//         File    : iir_gauss_blur.h                                *
-//         Author  : Nazuha26                                        *
-//                                                                   *
-//         Copyright (c) 2025 by Nazuha26                            *
-//         All bugs are my own. Handle with care.                    *
-//                                                                   *
-//********************************************************************
-
 /**
 
 IIR Gauss Filter v1.0
